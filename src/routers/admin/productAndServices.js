@@ -10,7 +10,7 @@ const {
   updateServices,
   getProductById,
   getProductByServices,
-} = require("../../controllers/admin/product&services");
+} = require("../../controllers/admin/productAndServices");
 let router = express.Router();
 let auth = require("../../../auth/adminauth");
 const multer = require("multer");

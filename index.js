@@ -42,7 +42,7 @@ const adminRoutes = [
   "contectUs",
   "forgetPass",
   "inquiry",
-  "product&Services",
+  "productAndServices",
   "register",
   "review",
   "sign_out",
