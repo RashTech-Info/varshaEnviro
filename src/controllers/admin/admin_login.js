@@ -6,7 +6,6 @@ exports.adminLogin = async (req, res) => {
     let email = req.body.email;
     let password = req.body.pass;
     let data = await admin.findOne({ email });
-    
 
     if (!data) {
       return res.status(404).json({
@@ -40,7 +39,9 @@ exports.adminLogin = async (req, res) => {
     await admin.findByIdAndUpdate(data._id, { auth_key: token });
 
     res.cookie("adjwt", token, {
-      httpOnly: false,
+      httpOnly: true,
+      secure: true, // Required for Vercel → HTTPS
+      sameSite: "None",
       maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
 
