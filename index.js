@@ -12,7 +12,7 @@ const app = express();
 // CORS Configuration
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://varsha-enviro.vercel.app/"], // Replace with your frontend URL
+    origin: ["http://localhost:5173", "https://varsha-enviro.vercel.app"], // Replace with your frontend URL
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
