@@ -12,7 +12,7 @@ const app = express();
 // CORS Configuration
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://varsha-enviro.vercel.app"], // Replace with your frontend URL
+    origin: ["http://localhost:5173", "https://varsha-enviro.vercel.app","https://varshaenviro.rashtechinfo.com"], // Replace with your frontend URL
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
@@ -28,7 +28,6 @@ app.use(cookieParser());
 // Serve Static Files
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/uploads", express.static("public/uploads"));
-app.use("/gallery", express.static("public/gallery"));
 
 // Connect to Database
 connectDB();
@@ -40,6 +39,7 @@ const adminRoutes = [
   "admin_profile",
   "changepass",
   "contectUs",
+  "clients",
   "forgetPass",
   "inquiry",
   "productAndServices",

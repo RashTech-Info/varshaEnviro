@@ -8,10 +8,9 @@ const contactUsSchema = new mongoose.Schema({
     type: Number,
   },
   email: { type: String },
+  subject: { type: String },
   message: { type: String },
-  status: { type: String ,
-    default: "New" ,
-  },
+  status: { type: String, default: "New" },
   createdAt: {
     type: Date,
     default: Date.now,

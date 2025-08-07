@@ -30,6 +30,7 @@ exports.addContactUs = async (req, res) => {
         <p><strong>Name:</strong> ${contact.name}</p>
         <p><strong>Email:</strong> ${contact.email}</p>
         <p><strong>Number:</strong> ${contact.number}</p>
+        <p><strong>Number:</strong> ${contact.subject}</p>
         <p><strong>Message:</strong> ${contact.message}</p>
       `,
     });
